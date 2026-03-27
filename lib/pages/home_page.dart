@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fist_app_mobil/pages/event_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,21 +8,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Asynconf 2026"),
-        backgroundColor: Colors.blue,
-      ),
-      body: Center(
+    return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //insert image in svg format and png format
-            SvgPicture.asset("assets/images/logo.svg", width: 200, height: 200),
+            // SvgPicture.asset("assets/images/logo.svg", width: 200, height: 200),
             Image.asset("assets/images/logo.png", width: 200, height: 200),
             Text(
               "Asynconf 2026",
-              style: TextStyle(fontSize: 45, fontFamily: 'poppins'),
+              // style: TextStyle(fontSize: 45, fontFamily: 'poppins'),
             ),
             Text(
               "Salon virtuel de l'informatique. Du 27 au 29 octobre 2026 et  plus",
@@ -47,13 +42,12 @@ class HomePage extends StatelessWidget {
                               MaterialPageRoute(builder: (context) => EventPage())
                 );
                 }, 
-            label: Text("afficherplanning",style: TextStyle(fontSize: 20),
+            label: Text("afficher planning",style: TextStyle(fontSize: 20),
             ),
             icon: Icon(Icons.calendar_month) , 
             )
           ],
         ),
-      ),
-    );
+      );
   }
 }
